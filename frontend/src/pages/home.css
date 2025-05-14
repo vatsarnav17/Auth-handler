@@ -1,0 +1,111 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure body takes up full height */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1e3a8a, #1e40af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden; /* Prevent any unwanted scroll */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; /* Full height of the viewport */
+  padding: 20px; /* Ensure the container has some padding inside */
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px; /* Adds space between the heading and button */
+  color: black;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  max-width: 200px; /* Limit the button width */
+  padding: 12px;
+  background-color: #6366f1;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #818cf8;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Container for user cards */
+.user-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+/* Styling for individual user cards */
+.user-card {
+  background-color: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 280px; /* Fixed width for each card */
+  color: #e0e7ff;
+  margin-bottom: 20px;
+  text-align: center;
+  max-height: 400px; /* Max height to prevent overflow */
+  overflow: hidden; /* Prevents overflow */
+  position: relative;
+  word-wrap: break-word; /* Ensures long words break to the next line */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for each text element inside the card */
+.user-card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+/* Styling for the "No users found" message */
+.no-users {
+  color: #e0e7ff;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.user-card img {
+  border-radius: 8px;
+  width: 80px; /* Set a fixed width for the image */
+  height: 80px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  margin-right: 20px; /* Space between image and text */
+}
